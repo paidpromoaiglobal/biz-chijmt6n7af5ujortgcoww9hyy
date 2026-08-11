@@ -114,6 +114,30 @@ section{padding:72px 5vw}
 .prod-photo-card img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block}
 .view-btn{display:block;text-align:center;padding:12px 10px;background:#1A6B8A;color:#fff;text-decoration:none;font-weight:700;font-size:.83rem;letter-spacing:.02em;transition:background .2s}
 .view-btn:hover{background:#134f65}
+/* ENQUIRY FORM */
+.enquiry-bg{background:linear-gradient(180deg,#eef6f8 0%,#ffffff 100%)}
+.enquiry-card{max-width:640px;margin:0 auto;background:#fff;border-radius:20px;box-shadow:0 16px 48px rgba(0,0,0,.08);padding:40px 28px;border:1px solid #e2e8f0}
+.enquiry-icon{width:64px;height:64px;border-radius:50%;background:#1A6B8A14;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:1.8rem}
+.enquiry-card h2{text-align:center;font-size:clamp(1.4rem,3vw,1.8rem);font-weight:800;color:#0f172a;margin-bottom:8px}
+.enquiry-card>p{text-align:center;color:#64748b;font-size:.9rem;margin-bottom:20px;line-height:1.6}
+.enquiry-divider{width:56px;height:3px;background:#1A6B8A;border-radius:2px;margin:0 auto 28px}
+.eq-row{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px}
+@media(min-width:560px){.eq-row{grid-template-columns:1fr 1fr}}
+.eq-field{margin-bottom:16px}
+.eq-field label{display:block;font-size:.82rem;font-weight:600;color:#334155;margin-bottom:6px}
+.eq-field label .req{color:#ef4444}
+.eq-input-wrap{position:relative}
+.eq-input-wrap input,.eq-input-wrap select,.eq-input-wrap textarea{width:100%;padding:12px 14px 12px 40px;border:1px solid #cbd5e1;border-radius:10px;font-family:inherit;font-size:.88rem;color:#0f172a;background:#fff}
+.eq-input-wrap input:focus,.eq-input-wrap select:focus,.eq-input-wrap textarea:focus{outline:none;border-color:#1A6B8A}
+.eq-input-wrap textarea{padding-left:14px;resize:vertical;min-height:90px}
+.eq-input-wrap select{appearance:none;-webkit-appearance:none;padding-right:32px;background-image:linear-gradient(45deg,transparent 50%,#64748b 50%),linear-gradient(135deg,#64748b 50%,transparent 50%);background-position:calc(100% - 18px) 55%,calc(100% - 13px) 55%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.eq-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);opacity:.55;font-size:.95rem;pointer-events:none}
+.eq-icon.eq-icon-top{top:16px;transform:none}
+.eq-consent{display:flex;align-items:flex-start;gap:10px;margin:6px 0 22px;font-size:.85rem;color:#334155}
+.eq-consent input{margin-top:3px;flex-shrink:0}
+.eq-submit{width:100%;background:#1A6B8A;color:#fff;border:none;padding:15px;border-radius:10px;font-weight:700;font-size:.88rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .2s}
+.eq-submit:hover{background:#134f65}
+.eq-note{text-align:center;color:#94a3b8;font-size:.78rem;margin-top:16px}
 /* REVIEWS */
 .reviews-bg{background:#0f172a}
 .rv-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:40px}
@@ -234,6 +258,66 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
   </div>
 </section>
 
+<section id="enquiry" class="enquiry-bg">
+  <div class="container">
+    <div class="enquiry-card" data-r>
+      <div class="enquiry-icon">👂</div>
+      <h2>Book Your Hearing Consultation</h2>
+      <p>Take the first step towards better hearing.<br>Our team will contact you shortly.</p>
+      <div class="enquiry-divider"></div>
+      <form id="enquiry-form">
+        <div class="eq-row">
+          <div class="eq-field">
+            <label>Name <span class="req">*</span></label>
+            <div class="eq-input-wrap"><span class="eq-icon">👤</span><input type="text" id="eq-name" placeholder="Enter your full name" required></div>
+          </div>
+          <div class="eq-field">
+            <label>Phone Number <span class="req">*</span></label>
+            <div class="eq-input-wrap"><span class="eq-icon">📞</span><input type="tel" id="eq-phone" placeholder="Enter your phone number" required></div>
+          </div>
+        </div>
+        <div class="eq-row">
+          <div class="eq-field">
+            <label>Email</label>
+            <div class="eq-input-wrap"><span class="eq-icon">✉️</span><input type="email" id="eq-email" placeholder="Enter your email address"></div>
+          </div>
+          <div class="eq-field">
+            <label>Location</label>
+            <div class="eq-input-wrap"><span class="eq-icon">📍</span><input type="text" id="eq-location" placeholder="Enter your location"></div>
+          </div>
+        </div>
+        <div class="eq-field">
+          <label>Service Required <span class="req">*</span></label>
+          <div class="eq-input-wrap">
+            <span class="eq-icon">🎧</span>
+            <select id="eq-service" required>
+              <option value="" disabled selected>Choose a service</option>
+              <option>Hearing Test</option>
+              <option>Hearing Aid Consultation</option>
+              <option>Hearing Aid Trial</option>
+              <option>Hearing Aid Purchase</option>
+              <option>Hearing Aid Service / Repair</option>
+              <option>Hearing Aid Upgrade</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+        </div>
+        <div class="eq-field">
+          <label>Preferred Date</label>
+          <div class="eq-input-wrap"><span class="eq-icon">📅</span><input type="date" id="eq-date"></div>
+        </div>
+        <div class="eq-field">
+          <label>Tell Us Your Concern</label>
+          <div class="eq-input-wrap"><span class="eq-icon eq-icon-top">💬</span><textarea id="eq-concern" placeholder="Please describe your concern or how we can help you..."></textarea></div>
+        </div>
+        <label class="eq-consent"><input type="checkbox" id="eq-consent" required> I agree to be contacted regarding my enquiry.</label>
+        <button type="submit" class="eq-submit">📅 Submit Enquiry</button>
+      </form>
+      <p class="eq-note">🛡️ Your information is safe and will only be used to assist you.</p>
+    </div>
+  </div>
+</section>
+
 <section class="reviews-bg">
   <div class="container">
     <div class="sec-head" data-r>
@@ -294,6 +378,28 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
   var nav=document.querySelector('nav');
   if(!nav)return;
   window.addEventListener('scroll',function(){nav.classList.toggle('nav-s',window.scrollY>50);},{passive:true});
+})();
+// Enquiry form -> WhatsApp
+(function(){
+  var form=document.getElementById('enquiry-form');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('eq-name').value.trim();
+    var phone=document.getElementById('eq-phone').value.trim();
+    var email=document.getElementById('eq-email').value.trim();
+    var location=document.getElementById('eq-location').value.trim();
+    var service=document.getElementById('eq-service').value;
+    var date=document.getElementById('eq-date').value;
+    var concern=document.getElementById('eq-concern').value.trim();
+    var lines=['Hello TKMRC! I would like to book a hearing consultation.','','Name: '+name,'Phone: '+phone];
+    if(email)lines.push('Email: '+email);
+    if(location)lines.push('Location: '+location);
+    lines.push('Service Required: '+service);
+    if(date)lines.push('Preferred Date: '+date);
+    if(concern)lines.push('Concern: '+concern);
+    window.open('https://wa.me/919363527775?text='+encodeURIComponent(lines.join('\n')),'_blank');
+  });
 })();
 // Parallax
 if(window.innerWidth>768){
