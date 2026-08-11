@@ -42,6 +42,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,
 .nav-links a:hover{color:#1A6B8A}
 .nav-cta{background:#1A6B8A;color:#fff;padding:9px 22px;border-radius:50px;text-decoration:none;font-size:.83rem;font-weight:600;white-space:nowrap;transition:opacity .2s}
 .nav-cta:hover{opacity:.88}
+.nav-cta-outline{background:transparent;border:1.5px solid #1A6B8A;color:#1A6B8A}
+.nav-cta-outline:hover{opacity:1;background:#1A6B8A14}
 /* HERO */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
 .hero-bg{position:absolute;inset:-20%;width:140%;height:140%;background-image:url('./img/hero.jpg');background-size:cover;background-position:center;will-change:transform}
@@ -113,8 +115,17 @@ section{padding:72px 5vw}
 .prod-photo-card:before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1A6B8A,#27AE60);z-index:1}
 .prod-photo-card img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block}
 .prod-card-footer{padding:16px;text-align:center}
-.view-btn{display:inline-block;background:#1A6B8A;color:#fff;padding:9px 22px;border-radius:50px;text-decoration:none;font-size:.83rem;font-weight:600;white-space:nowrap;transition:opacity .2s}
+.view-btn{display:inline-block;background:#1A6B8A;color:#fff;padding:9px 22px;border-radius:50px;text-decoration:none;font-size:.83rem;font-weight:600;white-space:nowrap;transition:opacity .2s;border:none;font-family:inherit;cursor:pointer}
 .view-btn:hover{opacity:.88}
+/* PRODUCT ENQUIRY MODAL */
+.pm-overlay{position:fixed;inset:0;z-index:9997;background:rgba(15,23,42,.6);display:none;align-items:center;justify-content:center;padding:5vw}
+.pm-overlay.open{display:flex}
+.pm-modal{position:relative;background:#fff;border-radius:20px;max-width:420px;width:100%;padding:36px 28px 28px;box-shadow:0 24px 64px rgba(0,0,0,.25)}
+.pm-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;border:none;background:#f1f5f9;color:#334155;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.pm-close:hover{background:#e2e8f0}
+.pm-title{font-size:1.1rem;font-weight:800;color:#0f172a;margin-bottom:18px;text-align:center;padding-right:8px}
+.pm-list{display:flex;flex-direction:column;gap:10px}
+.pm-item{background:#f8fafc;border-radius:50px;padding:11px 18px;font-size:.87rem;font-weight:600;color:#0f172a;border:1px solid #e2e8f0}
 /* ENQUIRY FORM */
 .enquiry-bg{background:linear-gradient(180deg,#eef6f8 0%,#ffffff 100%)}
 .enquiry-card{max-width:640px;margin:0 auto;background:#fff;border-radius:20px;box-shadow:0 16px 48px rgba(0,0,0,.08);padding:40px 28px;border:1px solid #e2e8f0}
@@ -172,7 +183,7 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
 <nav>
   <span class="nav-brand">TK Multi Rehabilitation Centre (TKMRC)</span>
   <div class="nav-links">
-    <a href="#products">Products</a>
+    <a href="#products" class="nav-cta nav-cta-outline">🛍️ Products</a>
     <a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I%20found%20your%20rehabilitation%20centre%20online%20and%20would%20like%20to%20enquire%20about%20your%20services%20and%20book%20an%20appointment.%20Could%20you%20please%20guide%20me%20on%20the%20next%20steps%3F" class="nav-cta">💬 WhatsApp</a>
   </div>
 </nav>
@@ -247,14 +258,21 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
       <p>Explore our curated range of premium hearing aids and rehabilitation products</p>
     </div>
     <div class="prod-photo-grid" data-r>
-      <div class="prod-photo-card"><img src="./img/product-1.webp" alt="Premium product 1 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I'm%20interested%20in%20the%20BTE%20(Behind-The-Ear)%20Hearing%20Aid.%0A%0A%F0%9F%94%8A%20Powerful%20Sound%20Output%0A%F0%9F%94%8B%20Long%20Battery%20Life%0A%F0%9F%91%82%20Comfortable%20Behind-Ear%20Design%0A%F0%9F%97%A3%EF%B8%8F%20Clearer%20Speech%20%26%20Conversations%0A%E2%9A%99%EF%B8%8F%20Easy%20to%20Use%20%26%20Adjust%0A%F0%9F%92%AA%20Reliable%20Everyday%20Performance%0A%0ACould%20you%20please%20share%20more%20details%20and%20pricing%3F" target="_blank" rel="noopener" class="view-btn">💬 Enquiry</a></div></div>
-      <div class="prod-photo-card"><img src="./img/product-2.webp" alt="Premium product 2 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I'm%20interested%20in%20the%20RIC%20(Receiver-In-Canal)%20Hearing%20Aid.%0A%0A%F0%9F%8E%A7%20Crystal%20Clear%20Sound%0A%F0%9F%93%B1%20Bluetooth%20Connectivity%0A%F0%9F%91%82%20Comfortable%20Receiver-in-Canal%20Design%0A%F0%9F%94%8A%20Clear%20%26%20Natural%20Hearing%0A%E2%9C%A8%20Compact%20%26%20Discreet%0A%F0%9F%92%99%20Easy%20to%20Use%0A%0ACould%20you%20please%20share%20more%20details%20and%20pricing%3F" target="_blank" rel="noopener" class="view-btn">💬 Enquiry</a></div></div>
-      <div class="prod-photo-card"><img src="./img/product-3.webp" alt="Premium product 3 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I'm%20interested%20in%20the%20IIC%20(Invisible-In-Canal)%20Hearing%20Aid.%0A%0A%F0%9F%91%81%EF%B8%8F%20Virtually%20Invisible%0A%F0%9F%91%82%20Custom%20Fit%0A%F0%9F%94%8A%20Natural%20Sound%0A%E2%9C%A8%20Discreet%20Comfort%0A%F0%9F%92%AF%20Everyday%20Confidence%0A%0ACould%20you%20please%20share%20more%20details%20and%20pricing%3F" target="_blank" rel="noopener" class="view-btn">💬 Enquiry</a></div></div>
-      <div class="prod-photo-card"><img src="./img/product-4.webp" alt="Premium product 4 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I'm%20interested%20in%20the%20CIC%20(Completely-In-Canal)%20Hearing%20Aid.%0A%0A%F0%9F%91%82%20Nearly%20Invisible%20Design%0A%F0%9F%8E%AF%20Custom-Made%20Fit%0A%F0%9F%94%8A%20Clear%20Natural%20Sound%0A%F0%9F%98%8A%20Comfortable%20All%20Day%0A%E2%9C%A8%20Discreet%20%26%20Stylish%0A%0ACould%20you%20please%20share%20more%20details%20and%20pricing%3F" target="_blank" rel="noopener" class="view-btn">💬 Enquiry</a></div></div>
-      <div class="prod-photo-card"><img src="./img/product-5.webp" alt="Premium product 5 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I'm%20interested%20in%20the%20ITC%20(In-The-Canal)%20Hearing%20Aid.%0A%0A%F0%9F%91%82%20Discreet%20Design%0A%F0%9F%94%8A%20Easy%20Volume%20Control%0A%E2%9C%A8%20Comfortable%20Fit%0A%F0%9F%8E%AF%20Clear%20Sound%20Quality%0A%F0%9F%92%AF%20Everyday%20Convenience%0A%0ACould%20you%20please%20share%20more%20details%20and%20pricing%3F" target="_blank" rel="noopener" class="view-btn">💬 Enquiry</a></div></div>
-      <div class="prod-photo-card"><img src="./img/product-6.webp" alt="Premium product 6 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I'm%20interested%20in%20the%20ITE%20(In-The-Ear)%20Hearing%20Aid.%0A%0A%F0%9F%91%82%20Comfortable%20In-Ear%20Fit%0A%F0%9F%94%8A%20Clear%20Sound%20Quality%0A%F0%9F%A4%9D%20Easy%20to%20Handle%0A%F0%9F%8E%AF%20Simple%20Controls%0A%E2%9C%A8%20Reliable%20Everyday%20Use%0A%0ACould%20you%20please%20share%20more%20details%20and%20pricing%3F" target="_blank" rel="noopener" class="view-btn">💬 Enquiry</a></div></div>
-      <div class="prod-photo-card"><img src="./img/product-7.webp" alt="Premium product 7 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I'm%20interested%20in%20the%20Rechargeable%20Hearing%20Aid.%0A%0A%F0%9F%94%8B%20Rechargeable%20Battery%0A%E2%9A%A1%20Fast%20%26%20Easy%20Charging%0A%F0%9F%8E%A7%20Clear%20Sound%20Quality%0A%F0%9F%8C%9F%20All-Day%20Performance%0A%E2%99%BB%EF%B8%8F%20Eco-Friendly%20Design%0A%0ACould%20you%20please%20share%20more%20details%20and%20pricing%3F" target="_blank" rel="noopener" class="view-btn">💬 Enquiry</a></div></div>
-      <div class="prod-photo-card"><img src="./img/product-8.webp" alt="Premium product 8 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I'm%20interested%20in%20the%20Pediatric%20Hearing%20Aid.%0A%0A%F0%9F%8C%88%20Child-Friendly%20Design%0A%F0%9F%94%8A%20Clear%20Sound%20Quality%0A%F0%9F%91%82%20Comfortable%20Fit%0A%F0%9F%8E%92%20Perfect%20for%20Daily%20Activities%0A%E2%9C%A8%20Built%20for%20Growing%20Kids%0A%0ACould%20you%20please%20share%20more%20details%20and%20pricing%3F" target="_blank" rel="noopener" class="view-btn">💬 Enquiry</a></div></div>
+      <div class="prod-photo-card"><img src="./img/product-1.webp" alt="Premium product 1 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="1">💬 Enquiry</button></div></div>
+      <div class="prod-photo-card"><img src="./img/product-2.webp" alt="Premium product 2 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="2">💬 Enquiry</button></div></div>
+      <div class="prod-photo-card"><img src="./img/product-3.webp" alt="Premium product 3 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="3">💬 Enquiry</button></div></div>
+      <div class="prod-photo-card"><img src="./img/product-4.webp" alt="Premium product 4 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="4">💬 Enquiry</button></div></div>
+      <div class="prod-photo-card"><img src="./img/product-5.webp" alt="Premium product 5 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="5">💬 Enquiry</button></div></div>
+      <div class="prod-photo-card"><img src="./img/product-6.webp" alt="Premium product 6 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="6">💬 Enquiry</button></div></div>
+      <div class="prod-photo-card"><img src="./img/product-7.webp" alt="Premium product 7 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="7">💬 Enquiry</button></div></div>
+      <div class="prod-photo-card"><img src="./img/product-8.webp" alt="Premium product 8 – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="8">💬 Enquiry</button></div></div>
+    </div>
+  </div>
+  <div class="pm-overlay" id="pmOverlay">
+    <div class="pm-modal" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+      <button type="button" class="pm-close" id="pmClose" aria-label="Close">✕</button>
+      <h3 class="pm-title" id="pmTitle"></h3>
+      <div class="pm-list" id="pmList"></div>
     </div>
   </div>
 </section>
@@ -379,6 +397,48 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
   var nav=document.querySelector('nav');
   if(!nav)return;
   window.addEventListener('scroll',function(){nav.classList.toggle('nav-s',window.scrollY>50);},{passive:true});
+})();
+// Product enquiry modal
+(function(){
+  var overlay=document.getElementById('pmOverlay');
+  if(!overlay)return;
+  var titleEl=document.getElementById('pmTitle');
+  var listEl=document.getElementById('pmList');
+  var closeBtn=document.getElementById('pmClose');
+  var PRODUCT_INFO={
+    1:{name:'BTE (Behind-The-Ear) Hearing Aid',bullets:['🔊 Powerful Sound Output','🔋 Long Battery Life','👂 Comfortable Behind-Ear Design','🗣️ Clearer Speech & Conversations','⚙️ Easy to Use & Adjust','💪 Reliable Everyday Performance']},
+    2:{name:'RIC (Receiver-In-Canal) Hearing Aid',bullets:['🎧 Crystal Clear Sound','📱 Bluetooth Connectivity','👂 Comfortable Receiver-in-Canal Design','🔊 Clear & Natural Hearing','✨ Compact & Discreet','💙 Easy to Use']},
+    3:{name:'IIC (Invisible-In-Canal) Hearing Aid',bullets:['👁️ Virtually Invisible','👂 Custom Fit','🔊 Natural Sound','✨ Discreet Comfort','💯 Everyday Confidence']},
+    4:{name:'CIC (Completely-In-Canal) Hearing Aid',bullets:['👂 Nearly Invisible Design','🎯 Custom-Made Fit','🔊 Clear Natural Sound','😊 Comfortable All Day','✨ Discreet & Stylish']},
+    5:{name:'ITC (In-The-Canal) Hearing Aid',bullets:['👂 Discreet Design','🔊 Easy Volume Control','✨ Comfortable Fit','🎯 Clear Sound Quality','💯 Everyday Convenience']},
+    6:{name:'ITE (In-The-Ear) Hearing Aid',bullets:['👂 Comfortable In-Ear Fit','🔊 Clear Sound Quality','🤝 Easy to Handle','🎯 Simple Controls','✨ Reliable Everyday Use']},
+    7:{name:'Rechargeable Hearing Aid',bullets:['🔋 Rechargeable Battery','⚡ Fast & Easy Charging','🎧 Clear Sound Quality','🌟 All-Day Performance','♻️ Eco-Friendly Design']},
+    8:{name:'Pediatric Hearing Aid',bullets:['🌈 Child-Friendly Design','🔊 Clear Sound Quality','👂 Comfortable Fit','🎒 Perfect for Daily Activities','✨ Built for Growing Kids']}
+  };
+  function openModal(id){
+    var info=PRODUCT_INFO[id];
+    if(!info)return;
+    titleEl.textContent=info.name;
+    listEl.innerHTML='';
+    info.bullets.forEach(function(b){
+      var item=document.createElement('div');
+      item.className='pm-item';
+      item.textContent=b;
+      listEl.appendChild(item);
+    });
+    overlay.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeModal(){
+    overlay.classList.remove('open');
+    document.body.style.overflow='';
+  }
+  document.querySelectorAll('.view-btn[data-product]').forEach(function(btn){
+    btn.addEventListener('click',function(){ openModal(btn.getAttribute('data-product')); });
+  });
+  closeBtn.addEventListener('click',closeModal);
+  overlay.addEventListener('click',function(e){ if(e.target===overlay)closeModal(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape')closeModal(); });
 })();
 // Enquiry form -> WhatsApp
 (function(){
