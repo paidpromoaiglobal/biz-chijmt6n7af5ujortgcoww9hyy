@@ -36,7 +36,9 @@ body{font-family:'Inter',sans-serif;color:#0f172a;background:#fff;-webkit-font-s
 .nav-s{box-shadow:0 2px 24px rgba(0,0,0,.12)!important;}
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,.06);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:62px;transition:box-shadow .3s}
-.nav-brand{font-weight:700;font-size:.98rem;color:#1A6B8A;max-width:45%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-brand-group{display:flex;align-items:center;gap:10px;max-width:55%;min-width:0}
+.nav-logo{width:36px;height:36px;border-radius:50%;object-fit:contain;flex-shrink:0}
+.nav-brand{font-weight:700;font-size:.98rem;color:#1A6B8A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .nav-links{display:flex;align-items:center;gap:22px}
 .nav-links a{color:#334155;text-decoration:none;font-size:.88rem;font-weight:500}
 .nav-links a:hover{color:#1A6B8A}
@@ -179,7 +181,10 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
 </head>
 <body>
 <nav>
-  <span class="nav-brand">TK Multi Rehabilitation Centre (TKMRC)</span>
+  <div class="nav-brand-group">
+    <img src="./img/logo.jpeg" alt="TKMRC logo" class="nav-logo">
+    <span class="nav-brand">TK Multi Rehabilitation Centre (TKMRC)</span>
+  </div>
   <div class="nav-links">
     <a href="#products" class="nav-cta">🛍️ Products</a>
     <a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I%20found%20your%20rehabilitation%20centre%20online%20and%20would%20like%20to%20enquire%20about%20your%20services%20and%20book%20an%20appointment.%20Could%20you%20please%20guide%20me%20on%20the%20next%20steps%3F" class="nav-cta">💬 WhatsApp</a>
