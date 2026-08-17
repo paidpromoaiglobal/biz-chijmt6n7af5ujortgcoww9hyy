@@ -35,12 +35,13 @@ body{font-family:'Inter',sans-serif;color:#0f172a;background:#fff;-webkit-font-s
 [data-r][data-d="5"]{transition-delay:.58s;}[data-r][data-d="6"]{transition-delay:.70s;}
 .nav-s{box-shadow:0 2px 24px rgba(0,0,0,.12)!important;}
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:900;background:linear-gradient(120deg,rgba(255,255,255,.98) 0%,rgba(232,244,248,.95) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(26,107,138,.14);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:84px;transition:box-shadow .3s}
+nav{position:fixed;top:0;left:0;right:0;z-index:900;background:linear-gradient(120deg,rgba(255,255,255,.98) 0%,rgba(232,244,248,.95) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(26,107,138,.14);padding:10px 5vw;display:flex;align-items:center;justify-content:space-between;min-height:98px;transition:box-shadow .3s}
 .nav-brand-group{display:flex;align-items:center;gap:12px;max-width:58%;min-width:0}
-.nav-logo{width:44px;height:44px;border-radius:50%;object-fit:contain;flex-shrink:0}
+.nav-logo{width:52px;height:52px;border-radius:50%;object-fit:contain;flex-shrink:0}
 .nav-brand-text{display:flex;flex-direction:column;min-width:0;line-height:1.2}
-.nav-brand{font-weight:800;font-size:clamp(1rem,2.4vw,1.3rem);color:#1A6B8A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
-.nav-slogan{font-size:.72rem;font-weight:500;font-style:italic;color:#27AE60;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;letter-spacing:.02em;margin-top:1px}
+.nav-brand-short{font-weight:800;font-size:clamp(1.25rem,3.2vw,1.6rem);color:#1A6B8A;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.nav-brand{font-size:.76rem;font-weight:600;color:#1A6B8A;opacity:.75;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;margin-top:1px}
+.nav-slogan{font-size:.7rem;font-weight:500;font-style:italic;color:#27AE60;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;letter-spacing:.02em;margin-top:2px}
 .nav-links{display:flex;align-items:center;gap:22px}
 .nav-links a{color:#334155;text-decoration:none;font-size:.88rem;font-weight:500}
 .nav-links a:hover{color:#1A6B8A}
@@ -50,7 +51,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;background:linear-gradient(1
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
 .hero-bg{position:absolute;inset:-20%;width:140%;height:140%;background-image:url('./img/hero.jpg');background-size:cover;background-position:center;will-change:transform}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,#0f3d50f2 0%,#1A6B8Aab 45%,#E8F4F8b8 100%)}
-.hero-inner{position:relative;z-index:2;padding:100px 24px 64px;color:#fff;max-width:720px}
+.hero-inner{position:relative;z-index:2;padding:130px 24px 64px;color:#fff;max-width:720px}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);padding:7px 18px;border-radius:50px;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(6px)}
 .hero h1{font-size:clamp(2rem,5.5vw,3.2rem);font-weight:800;line-height:1.12;margin-bottom:18px;letter-spacing:-.03em}
 .hero p{font-size:clamp(.97rem,2.2vw,1.12rem);opacity:.88;line-height:1.7;margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto}
@@ -186,7 +187,8 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
   <div class="nav-brand-group">
     <img src="./img/logo.jpeg" alt="TKMRC logo" class="nav-logo">
     <div class="nav-brand-text">
-      <span class="nav-brand">TK Multi Rehabilitation Centre (TKMRC)</span>
+      <span class="nav-brand-short">TKMRC</span>
+      <span class="nav-brand">TK Multi Rehabilitation Centre</span>
       <span class="nav-slogan">Rebuilding Lives, Restoring Hope</span>
     </div>
   </div>
