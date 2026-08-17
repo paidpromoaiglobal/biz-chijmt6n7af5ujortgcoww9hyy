@@ -35,23 +35,32 @@ body{font-family:'Inter',sans-serif;color:#0f172a;background:#fff;-webkit-font-s
 [data-r][data-d="5"]{transition-delay:.58s;}[data-r][data-d="6"]{transition-delay:.70s;}
 .nav-s{box-shadow:0 2px 24px rgba(0,0,0,.12)!important;}
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:900;background:linear-gradient(120deg,rgba(255,255,255,.98) 0%,rgba(232,244,248,.95) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(26,107,138,.14);padding:10px 5vw;display:flex;align-items:center;justify-content:space-between;min-height:98px;transition:box-shadow .3s}
+nav{position:fixed;top:0;left:0;right:0;z-index:900;background:linear-gradient(120deg,rgba(255,255,255,.98) 0%,rgba(232,244,248,.95) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(26,107,138,.14);padding:8px 5vw;display:flex;align-items:center;justify-content:space-between;min-height:84px;transition:box-shadow .3s}
 .nav-brand-group{display:flex;align-items:center;gap:12px;max-width:58%;min-width:0}
 .nav-logo{width:52px;height:52px;border-radius:50%;object-fit:contain;flex-shrink:0}
 .nav-brand-text{display:flex;flex-direction:column;min-width:0;line-height:1.2}
 .nav-brand-short{font-weight:800;font-size:clamp(1.25rem,3.2vw,1.6rem);color:#1A6B8A;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .nav-brand{font-size:.76rem;font-weight:600;color:#1A6B8A;opacity:.75;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;margin-top:1px}
-.nav-slogan{display:inline-block;font-size:.74rem;font-weight:700;font-style:normal;color:#188a4e;background:#27AE6018;border:1px solid #27AE6045;padding:2px 11px;border-radius:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;min-width:0;letter-spacing:.02em;margin-top:4px}
 .nav-links{display:flex;align-items:center;gap:22px}
 .nav-links a{color:#334155;text-decoration:none;font-size:.88rem;font-weight:500}
 .nav-links a:hover{color:#1A6B8A}
 .nav-cta{background:#1A6B8A;color:#fff;padding:9px 22px;border-radius:50px;text-decoration:none;font-size:.83rem;font-weight:600;white-space:nowrap;transition:opacity .2s}
+.nav-cta-whatsapp{background:#25d366}
+@media(max-width:520px){
+  nav{padding:8px 4vw;min-height:72px}
+  .nav-logo{width:38px;height:38px}
+  .nav-brand-group{gap:8px;max-width:54%}
+  .nav-brand-short{font-size:1.02rem}
+  .nav-brand{font-size:.64rem}
+  .nav-links{gap:8px}
+  .nav-cta{padding:8px 12px;font-size:.72rem}
+}
 .nav-cta:hover{opacity:.88}
 /* HERO */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-.hero-bg{position:absolute;inset:-20%;width:140%;height:140%;background-image:url('./img/hero.jpg');background-size:cover;background-position:center;will-change:transform}
+.hero-bg{position:absolute;inset:-20%;width:140%;height:140%;background-image:url('./1.jpeg');background-size:cover;background-position:center;will-change:transform}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,#0f3d50f2 0%,#1A6B8Aab 45%,#E8F4F8b8 100%)}
-.hero-inner{position:relative;z-index:2;padding:130px 24px 64px;color:#fff;max-width:720px}
+.hero-inner{position:relative;z-index:2;padding:112px 24px 64px;color:#fff;max-width:720px}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);padding:7px 18px;border-radius:50px;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(6px)}
 .hero h1{font-size:clamp(2rem,5.5vw,3.2rem);font-weight:800;line-height:1.12;margin-bottom:18px;letter-spacing:-.03em}
 .hero p{font-size:clamp(.97rem,2.2vw,1.12rem);opacity:.88;line-height:1.7;margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto}
@@ -193,12 +202,11 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
     <div class="nav-brand-text">
       <span class="nav-brand-short">TKMRC</span>
       <span class="nav-brand">TK Multi Rehabilitation Centre</span>
-      <span class="nav-slogan">Rebuilding Lives, Restoring Hope</span>
     </div>
   </div>
   <div class="nav-links">
     <a href="#products" class="nav-cta">🛍️ Products</a>
-    <a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I%20found%20your%20rehabilitation%20centre%20online%20and%20would%20like%20to%20enquire%20about%20your%20services%20and%20book%20an%20appointment.%20Could%20you%20please%20guide%20me%20on%20the%20next%20steps%3F" class="nav-cta">💬 WhatsApp</a>
+    <a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I%20found%20your%20rehabilitation%20centre%20online%20and%20would%20like%20to%20enquire%20about%20your%20services%20and%20book%20an%20appointment.%20Could%20you%20please%20guide%20me%20on%20the%20next%20steps%3F" class="nav-cta nav-cta-whatsapp">💬 WhatsApp</a>
   </div>
 </nav>
 
@@ -226,7 +234,7 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
   <div class="container">
     <div class="about-wrap">
       <div class="about-img-wrap" data-r>
-        <img src="./img/photo-0.jpg" alt="TK Multi Rehabilitation Centre (TKMRC)" class="about-img" loading="lazy" onerror="this.src='./img/photo-0.jpg'">
+        <img src="./4.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" class="about-img" loading="lazy">
         <div class="about-badge">✓ Verified Business</div>
       </div>
       <div class="about-text" data-r data-d="2">
@@ -262,7 +270,7 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
   </div>
 </div>
 
-<section><div class="container"><div class="sec-head" data-r><p class="sec-eyebrow">Our Space</p><h2>A Look Inside</h2></div><div class="gallery-grid"><img src="./img/photo-0.jpg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&q=85&fit=crop&auto=format'"><img src="./img/photo-1.jpg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551076805-e1869033e561?w=1600&q=85&fit=crop&auto=format'"><img src="./img/photo-2.jpg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?w=1600&q=85&fit=crop&auto=format'"><img src="./img/photo-3.jpg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?w=1600&q=85&fit=crop&auto=format'"><img src="./img/photo-4.jpg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&q=85&fit=crop&auto=format'"></div></div></section>
+<section><div class="container"><div class="sec-head" data-r><p class="sec-eyebrow">Our Space</p><h2>A Look Inside</h2></div><div class="gallery-grid"><img src="./img/photo-2.jpg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?w=1600&q=85&fit=crop&auto=format'"><img src="./1.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./2.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./3.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./4.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./5.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./6.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"></div></div></section>
 
 <section id="products" class="products-bg">
   <div class="container">
