@@ -35,10 +35,12 @@ body{font-family:'Inter',sans-serif;color:#0f172a;background:#fff;-webkit-font-s
 [data-r][data-d="5"]{transition-delay:.58s;}[data-r][data-d="6"]{transition-delay:.70s;}
 .nav-s{box-shadow:0 2px 24px rgba(0,0,0,.12)!important;}
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,.06);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:62px;transition:box-shadow .3s}
-.nav-brand-group{display:flex;align-items:center;gap:10px;max-width:55%;min-width:0}
-.nav-logo{width:36px;height:36px;border-radius:50%;object-fit:contain;flex-shrink:0}
-.nav-brand{font-weight:700;font-size:.98rem;color:#1A6B8A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+nav{position:fixed;top:0;left:0;right:0;z-index:900;background:linear-gradient(120deg,rgba(255,255,255,.98) 0%,rgba(232,244,248,.95) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(26,107,138,.14);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:84px;transition:box-shadow .3s}
+.nav-brand-group{display:flex;align-items:center;gap:12px;max-width:58%;min-width:0}
+.nav-logo{width:44px;height:44px;border-radius:50%;object-fit:contain;flex-shrink:0}
+.nav-brand-text{display:flex;flex-direction:column;min-width:0;line-height:1.2}
+.nav-brand{font-weight:800;font-size:clamp(1rem,2.4vw,1.3rem);color:#1A6B8A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.nav-slogan{font-size:.72rem;font-weight:500;font-style:italic;color:#27AE60;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;letter-spacing:.02em;margin-top:1px}
 .nav-links{display:flex;align-items:center;gap:22px}
 .nav-links a{color:#334155;text-decoration:none;font-size:.88rem;font-weight:500}
 .nav-links a:hover{color:#1A6B8A}
@@ -183,7 +185,10 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
 <nav>
   <div class="nav-brand-group">
     <img src="./img/logo.jpeg" alt="TKMRC logo" class="nav-logo">
-    <span class="nav-brand">TK Multi Rehabilitation Centre (TKMRC)</span>
+    <div class="nav-brand-text">
+      <span class="nav-brand">TK Multi Rehabilitation Centre (TKMRC)</span>
+      <span class="nav-slogan">Rebuilding Lives, Restoring Hope</span>
+    </div>
   </div>
   <div class="nav-links">
     <a href="#products" class="nav-cta">🛍️ Products</a>
