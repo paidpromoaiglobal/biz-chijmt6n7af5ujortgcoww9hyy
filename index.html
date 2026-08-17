@@ -41,19 +41,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;background:linear-gradient(1
 .nav-brand-text{display:flex;flex-direction:column;min-width:0;line-height:1.2}
 .nav-brand-short{font-weight:800;font-size:clamp(1.25rem,3.2vw,1.6rem);color:#1A6B8A;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .nav-brand{font-size:.76rem;font-weight:600;color:#1A6B8A;opacity:.75;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;margin-top:1px}
+.nav-slogan{font-size:.7rem;font-weight:500;font-style:italic;color:#27AE60;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;letter-spacing:.02em;margin-top:2px}
 .nav-links{display:flex;align-items:center;gap:22px}
 .nav-links a{color:#334155;text-decoration:none;font-size:.88rem;font-weight:500}
 .nav-links a:hover{color:#1A6B8A}
 .nav-cta{background:#1A6B8A;color:#fff;padding:9px 22px;border-radius:50px;text-decoration:none;font-size:.83rem;font-weight:600;white-space:nowrap;transition:opacity .2s}
 .nav-cta-whatsapp{background:#25d366}
-@media(max-width:520px){
-  nav{padding:8px 4vw;min-height:72px}
-  .nav-logo{width:38px;height:38px}
-  .nav-brand-group{gap:8px;max-width:54%}
-  .nav-brand-short{font-size:1.02rem}
-  .nav-brand{font-size:.64rem}
-  .nav-links{gap:8px}
-  .nav-cta{padding:8px 12px;font-size:.72rem}
+@media(max-width:560px){
+  nav{flex-wrap:wrap;row-gap:10px;padding:12px 5vw;min-height:auto}
+  .nav-brand-group{max-width:100%;width:100%;gap:10px}
+  .nav-logo{width:42px;height:42px}
+  .nav-brand-short{font-size:1.1rem}
+  .nav-brand{font-size:.7rem}
+  .nav-slogan{font-size:.66rem}
+  .nav-links{width:100%;justify-content:flex-start;gap:10px}
+  .nav-cta{padding:8px 16px;font-size:.76rem}
+  .hero-inner{padding-top:172px}
 }
 .nav-cta:hover{opacity:.88}
 /* HERO */
@@ -102,8 +105,7 @@ section{padding:72px 5vw}
 .svc-card{background:#fff;border-radius:16px;padding:28px;border:1px solid #e2e8f0;transition:transform .22s,box-shadow .22s;position:relative;overflow:hidden}
 .svc-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(0,0,0,.09)}
 .svc-card:before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1A6B8A,#27AE60)}
-.svc-icon{width:46px;height:46px;background:#1A6B8A14;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:#1A6B8A}
-.svc-icon svg{width:24px;height:24px;flex-shrink:0}
+.svc-icon{width:46px;height:46px;background:#1A6B8A14;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.2rem}
 .svc-card h3{font-weight:700;color:#0f172a;margin-bottom:8px;font-size:.96rem}
 .svc-card p{color:#64748b;font-size:.86rem;line-height:1.65}
 .svc-sublist{list-style:none;margin-top:14px;padding-top:14px;border-top:1px solid #e2e8f0;display:flex;flex-direction:column;gap:7px}
@@ -202,6 +204,7 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
     <div class="nav-brand-text">
       <span class="nav-brand-short">TKMRC</span>
       <span class="nav-brand">TK Multi Rehabilitation Centre</span>
+      <span class="nav-slogan">Rebuilding Lives, Restoring Hope</span>
     </div>
   </div>
   <div class="nav-links">
@@ -255,7 +258,7 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
       <p>Professional care tailored to your needs</p>
     </div>
     <div class="svc-grid">
-      <div class="svc-card" data-r data-d="1"><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l-1 -3l4 -2l4 1h3.5"/><path d="M3 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M11 6a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12 17v-7"/><path d="M8 20h7l1 -4l4 -2"/><path d="M18 20h3"/></svg></div><h3>Physiotherapy</h3><ul class="svc-sublist"><li>Pediatric Physiotherapy</li><li>Pain Management</li><li>Postural Training</li><li>Range of Motion Exercises</li><li>Home Exercise Programs</li></ul></div><div class="svc-card" data-r data-d="2"><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8"/><path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8"/><path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5"/><path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0"/><path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5"/><path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10"/></svg></div><h3>Neurological Rehabilitation</h3><ul class="svc-sublist"><li>Stroke Rehabilitation</li><li>Parkinson's Disease Management</li><li>Spinal Cord Injury Rehabilitation</li><li>Balance and Coordination Training</li><li>Gait Training</li><li>Cognitive Rehabilitation</li><li>Neuro-Developmental Therapy (NDT)</li></ul></div><div class="svc-card" data-r data-d="3"><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5"/><path d="M11 11.5v-2a1.5 1.5 0 1 1 3 0v2.5"/><path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5"/><path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7a69.74 69.74 0 0 1 -.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47"/></svg></div><h3>Occupational Therapy</h3><ul class="svc-sublist"><li>Pediatric Occupational Therapy</li><li>Sensory Integration Therapy</li><li>Activities of Daily Living (ADL) Training</li><li>Visual-Motor Integration Training</li><li>Behavioural Therapy</li><li>Play Skill Development</li><li>Fine and Gross Motor Skill Development</li></ul></div><div class="svc-card" data-r data-d="1"><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1"/></svg></div><h3>Speech &amp; Language Therapy</h3><ul class="svc-sublist"><li>Speech and Language Assessment</li><li>Speech and Language Therapy</li><li>Voice Therapy</li><li>Articulation Therapy</li><li>Fluency (Stuttering) Therapy</li><li>Speech Therapy for Stroke Patients</li><li>Therapy for Learning Disability</li></ul></div><div class="svc-card" data-r data-d="2"><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"/><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"/></svg></div><h3>Special Education</h3><ul class="svc-sublist"><li>Individualized Education Plan (IEP) Support</li><li>Learning Disability Assessment</li><li>Cognitive Skill Development</li><li>Remedial Teaching</li><li>Life Skills Training</li><li>Behavioural and Emotional Support</li><li>Parent Counseling and Guidance</li></ul></div><div class="svc-card" data-r data-d="3"><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3a4.5 4.5 0 0 1 -6.8 1.4"/><path d="M10 10a3 3 0 1 1 5 2.2"/></svg></div><h3>Audiology</h3><ul class="svc-sublist"><li>Hearing Testing for All Age Groups</li><li>New Born Hearing Screening</li><li>Hearing Aid Trial and Fitting</li><li>Auditory Verbal Therapy</li><li>Balance Assessment and Treatment</li></ul></div>
+      <div class="svc-card" data-r data-d="1"><div class="svc-icon">🦵</div><h3>Physiotherapy</h3><ul class="svc-sublist"><li>Pediatric Physiotherapy</li><li>Pain Management</li><li>Postural Training</li><li>Range of Motion Exercises</li><li>Home Exercise Programs</li></ul></div><div class="svc-card" data-r data-d="2"><div class="svc-icon">🧠</div><h3>Neurological Rehabilitation</h3><ul class="svc-sublist"><li>Stroke Rehabilitation</li><li>Parkinson's Disease Management</li><li>Spinal Cord Injury Rehabilitation</li><li>Balance and Coordination Training</li><li>Gait Training</li><li>Cognitive Rehabilitation</li><li>Neuro-Developmental Therapy (NDT)</li></ul></div><div class="svc-card" data-r data-d="3"><div class="svc-icon">🖐️</div><h3>Occupational Therapy</h3><ul class="svc-sublist"><li>Pediatric Occupational Therapy</li><li>Sensory Integration Therapy</li><li>Activities of Daily Living (ADL) Training</li><li>Visual-Motor Integration Training</li><li>Behavioural Therapy</li><li>Play Skill Development</li><li>Fine and Gross Motor Skill Development</li></ul></div><div class="svc-card" data-r data-d="1"><div class="svc-icon">🗣️</div><h3>Speech &amp; Language Therapy</h3><ul class="svc-sublist"><li>Speech and Language Assessment</li><li>Speech and Language Therapy</li><li>Voice Therapy</li><li>Articulation Therapy</li><li>Fluency (Stuttering) Therapy</li><li>Speech Therapy for Stroke Patients</li><li>Therapy for Learning Disability</li></ul></div><div class="svc-card" data-r data-d="2"><div class="svc-icon">🎓</div><h3>Special Education</h3><ul class="svc-sublist"><li>Individualized Education Plan (IEP) Support</li><li>Learning Disability Assessment</li><li>Cognitive Skill Development</li><li>Remedial Teaching</li><li>Life Skills Training</li><li>Behavioural and Emotional Support</li><li>Parent Counseling and Guidance</li></ul></div><div class="svc-card" data-r data-d="3"><div class="svc-icon">👂</div><h3>Audiology</h3><ul class="svc-sublist"><li>Hearing Testing for All Age Groups</li><li>New Born Hearing Screening</li><li>Hearing Aid Trial and Fitting</li><li>Auditory Verbal Therapy</li><li>Balance Assessment and Treatment</li></ul></div>
     </div>
   </div>
 </section>
