@@ -48,6 +48,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;background:linear-gradient(1
 .nav-cta{background:#1A6B8A;color:#fff;padding:9px 22px;border-radius:50px;text-decoration:none;font-size:.83rem;font-weight:600;white-space:nowrap;transition:opacity .2s}
 .nav-links a.nav-cta,.nav-links a.nav-cta:hover,.nav-links a.nav-cta:visited{color:#fff}
 .nav-cta-whatsapp{background:#25d366}
+.nav-cta-white{background:#fff;border:1.5px solid #1A6B8A}
+.nav-links a.nav-cta.nav-cta-white,.nav-links a.nav-cta.nav-cta-white:hover,.nav-links a.nav-cta.nav-cta-white:visited{color:#1A6B8A}
 @media(max-width:560px){
   nav{flex-wrap:wrap;row-gap:10px;padding:12px 5vw;min-height:auto}
   .nav-brand-group{max-width:100%;width:100%;gap:10px}
@@ -106,7 +108,8 @@ section{padding:72px 5vw}
 .svc-card{background:#fff;border-radius:16px;padding:28px;border:1px solid #e2e8f0;transition:transform .22s,box-shadow .22s;position:relative;overflow:hidden}
 .svc-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(0,0,0,.09)}
 .svc-card:before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1A6B8A,#27AE60)}
-.svc-icon{width:46px;height:46px;background:#1A6B8A14;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.2rem}
+.svc-icon{width:46px;height:46px;background:#1A6B8A14;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.2rem;color:#1A6B8A}
+.svc-icon svg{width:24px;height:24px}
 .svc-card h3{font-weight:700;color:#0f172a;margin-bottom:8px;font-size:.96rem}
 .svc-card p{color:#64748b;font-size:.86rem;line-height:1.65}
 .svc-sublist{list-style:none;margin-top:14px;padding-top:14px;border-top:1px solid #e2e8f0;display:flex;flex-direction:column;gap:7px}
@@ -147,11 +150,27 @@ section{padding:72px 5vw}
 .pm-item{background:#f8fafc;border-radius:50px;padding:11px 18px;font-size:.87rem;font-weight:600;color:#0f172a;border:1px solid #e2e8f0}
 /* ENQUIRY FORM */
 .enquiry-bg{background:linear-gradient(180deg,#eef6f8 0%,#ffffff 100%)}
-.enquiry-card{max-width:640px;margin:0 auto;background:#fff;border-radius:20px;box-shadow:0 16px 48px rgba(0,0,0,.08);padding:40px 28px;border:1px solid #e2e8f0}
-.enquiry-icon{width:64px;height:64px;border-radius:50%;background:#1A6B8A14;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:1.8rem}
+.enquiry-wrap{max-width:1040px;margin:0 auto;background:#fff;border-radius:20px;box-shadow:0 20px 56px rgba(0,0,0,.1);overflow:hidden;border:1px solid #e2e8f0}
+.enquiry-header{background:linear-gradient(120deg,#1A6B8A 0%,#0f3d50 100%);padding:22px 28px;display:flex;align-items:center;gap:14px;color:#fff}
+.enquiry-header img{width:44px;height:44px;border-radius:50%;object-fit:contain;background:#fff;padding:3px;flex-shrink:0}
+.enquiry-header-text .eh1{font-weight:800;font-size:1.15rem;display:block;letter-spacing:.02em}
+.enquiry-header-text .eh2{font-size:.66rem;letter-spacing:.1em;opacity:.85;display:block;margin-top:2px}
+.enquiry-body{padding:32px 28px}
+.enquiry-body-grid{display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:840px){.enquiry-body-grid{grid-template-columns:1.5fr 1fr}}
 .enquiry-card h2{text-align:center;font-size:clamp(1.4rem,3vw,1.8rem);font-weight:800;color:#0f172a;margin-bottom:8px}
 .enquiry-card>p{text-align:center;color:#64748b;font-size:.9rem;margin-bottom:20px;line-height:1.6}
 .enquiry-divider{width:56px;height:3px;background:#1A6B8A;border-radius:2px;margin:0 auto 28px}
+.eq-submit-outline{display:block;width:100%;background:#fff;border:1.5px solid #1A6B8A;color:#1A6B8A;padding:13px;border-radius:10px;font-weight:700;font-size:.86rem;text-align:center;text-decoration:none;transition:background .2s;margin-top:12px}
+.eq-submit-outline:hover{background:#1A6B8A0c}
+.enquiry-sidebar{background:#f0f7fa;border-radius:14px;padding:24px}
+.enquiry-sidebar h4{color:#1A6B8A;font-size:.92rem;font-weight:800;margin-bottom:14px}
+.enquiry-svc-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.enquiry-svc-list li{display:flex;align-items:center;gap:10px;font-size:.85rem;color:#334155}
+.enquiry-svc-list li span{width:26px;height:26px;background:#1A6B8A14;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.enquiry-why-list{list-style:none;display:flex;flex-direction:column;gap:9px}
+.enquiry-why-list li{font-size:.83rem;color:#334155;padding-left:22px;position:relative}
+.enquiry-why-list li:before{content:'✓';position:absolute;left:0;color:#27AE60;font-weight:800}
 .eq-row{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px}
 @media(min-width:560px){.eq-row{grid-template-columns:1fr 1fr}}
 .eq-field{margin-bottom:16px}
@@ -205,11 +224,11 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
     <div class="nav-brand-text">
       <span class="nav-brand-short">TKMRC</span>
       <span class="nav-brand">TK Multi Rehabilitation Centre</span>
-      <span class="nav-slogan">Rebuilding Lives, Restoring Hope</span>
+      <span class="nav-slogan">“Rebuilding Lives, Restoring Hope”</span>
     </div>
   </div>
   <div class="nav-links">
-    <a href="#products" class="nav-cta">🛍️ Products</a>
+    <a href="#products" class="nav-cta nav-cta-white">🛍️ Products</a>
     <a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I%20found%20your%20rehabilitation%20centre%20online%20and%20would%20like%20to%20enquire%20about%20your%20services%20and%20book%20an%20appointment.%20Could%20you%20please%20guide%20me%20on%20the%20next%20steps%3F" class="nav-cta nav-cta-whatsapp">💬 WhatsApp</a>
   </div>
 </nav>
@@ -244,7 +263,7 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
       <div class="about-text" data-r data-d="2">
         <p class="sec-eyebrow">About Us</p>
         <h2>TK Multi Rehabilitation Centre (TKMRC)</h2>
-        <p>TK Multi Rehabilitation Centre (TKMRC) is a trusted multi-specialty rehabilitation facility located in Maraimalai Nagar, Tamil Nadu. With a perfect 5-star rating backed by 72 satisfied patients, TKMRC is dedicated to delivering compassionate, evidence-based therapeutic care to individuals recovering from injuries, surgeries, neurological conditions, and mobility challenges. Our expert team combines modern rehabilitation techniques with personalized treatment plans to ensure every patient achieves the best possible outcome.</p><p>Conveniently situated at Anna Salai Road, NH-1, Maraimalai Nagar, our centre is easily accessible to residents across the region. We offer six days of extended hours and Sunday consultations to accommodate busy schedules and urgent care needs. Whether you are seeking physiotherapy, occupational therapy, speech therapy, or specialized rehabilitation support, TKMRC is your partner in healing — guiding you every step of the way toward a healthier, more active life.</p>
+        <p>TK Multi Rehabilitation Centre (TKMRC) is a trusted multi-specialty rehabilitation and hearing care centre in Maraimalai Nagar, Tamil Nadu, dedicated to providing compassionate, evidence-based healthcare for children, adults, and senior citizens. Our experienced team offers a comprehensive range of services, including hearing assessment, digital hearing aid fitting and programming, hearing aid repair and maintenance, newborn and pediatric hearing screening, speech and language therapy, occupational therapy, special education, vestibular assessment and rehabilitation, and physiotherapy, all under one roof. With advanced diagnostic technology and individualized treatment plans, we focus on delivering high-quality care that addresses the unique needs and goals of every patient.</p><p>At TKMRC, our patient-centered approach focuses on achieving meaningful outcomes and improving quality of life. Whether you are looking for the latest digital hearing aids, professional rehabilitation services, or developmental therapy for your child, our dedicated team is committed to guiding and supporting you throughout your rehabilitation journey.</p><p>If you are searching for the best hearing aid centre in Maraimalai Nagar, speech therapy near Maraimalai Nagar, occupational therapy, physiotherapy, or a comprehensive rehabilitation centre in Maraimalai Nagar, TK Multi Rehabilitation Centre (TKMRC) is a trusted destination for professional care, personalized rehabilitation, and better long-term outcomes.</p><p>Conveniently located at Anna Salai, NH-1, Maraimalai Nagar, TKMRC is easily accessible to residents from Maraimalai Nagar and surrounding areas. Our centre offers extended working hours six days a week, along with Sunday consultations, making it convenient for individuals and families to access timely rehabilitation and hearing care services.</p><p>Whether you are looking for hearing assessment, hearing aid fitting or repair, speech and language therapy, occupational therapy, special education, or physiotherapy services, TKMRC is committed to supporting you throughout your rehabilitation journey. Our dedicated team works closely with every individual to improve communication, mobility, functional abilities, independence, and overall quality of life.</p>
         <ul class="hl-list"><li>Perfect 5-Star Rating with 72 Verified Patient Reviews</li><li>Open 6 Days a Week with Extended Hours Until 8:30 PM</li><li>Multi-Specialty Rehabilitation Under One Roof</li></ul>
       </div>
     </div>
@@ -259,7 +278,7 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
       <p>Professional care tailored to your needs</p>
     </div>
     <div class="svc-grid">
-      <div class="svc-card" data-r data-d="1"><div class="svc-icon">👂</div><h3>Audiology</h3><ul class="svc-sublist"><li>Hearing Testing for All Age Groups</li><li>New Born Hearing Screening</li><li>Hearing Aid Trial and Fitting</li><li>Auditory Verbal Therapy</li><li>Balance Assessment and Treatment</li><li>Tinnitus Retraining Therapy</li></ul></div><div class="svc-card" data-r data-d="2"><div class="svc-icon">🗣️</div><h3>Speech &amp; Language Therapy</h3><ul class="svc-sublist"><li>Speech and Language Assessment</li><li>Speech and Language Therapy</li><li>Voice Therapy</li><li>Articulation Therapy</li><li>Fluency (Stuttering) Therapy</li><li>Speech Therapy for Stroke Patients</li><li>Therapy for Learning Disability</li></ul></div><div class="svc-card" data-r data-d="3"><div class="svc-icon">🖐️</div><h3>Occupational Therapy</h3><ul class="svc-sublist"><li>Pediatric Occupational Therapy</li><li>Sensory Integration Therapy</li><li>Activities of Daily Living (ADL) Training</li><li>Visual-Motor Integration Training</li><li>Behavioural Therapy</li><li>Play Skill Development</li><li>Fine and Gross Motor Skill Development</li></ul></div><div class="svc-card" data-r data-d="1"><div class="svc-icon">🎓</div><h3>Special Education</h3><ul class="svc-sublist"><li>Individualized Education Plan (IEP) Support</li><li>Learning Disability Assessment</li><li>Cognitive Skill Development</li><li>Remedial Teaching</li><li>Life Skills Training</li><li>Behavioural and Emotional Support</li><li>Parent Counseling and Guidance</li></ul></div><div class="svc-card" data-r data-d="2"><div class="svc-icon">🧠</div><h3>Neurological Rehabilitation</h3><ul class="svc-sublist"><li>Stroke Rehabilitation</li><li>Parkinson's Disease Management</li><li>Spinal Cord Injury Rehabilitation</li><li>Balance and Coordination Training</li><li>Gait Training</li><li>Cognitive Rehabilitation</li><li>Neuro-Developmental Therapy (NDT)</li></ul></div><div class="svc-card" data-r data-d="3"><div class="svc-icon">🦵</div><h3>Physiotherapy</h3><ul class="svc-sublist"><li>Pediatric Physiotherapy</li><li>Pain Management</li><li>Postural Training</li><li>Range of Motion Exercises</li><li>Home Exercise Programs</li></ul></div>
+      <div class="svc-card" data-r data-d="1"><div class="svc-icon">👂</div><h3>Audiology</h3><ul class="svc-sublist"><li>Hearing Testing for All Age Groups</li><li>New Born Hearing Screening</li><li>Hearing Aid Trial and Fitting</li><li>Auditory Verbal Therapy</li><li>Balance Assessment and Treatment</li><li>Tinnitus Retraining Therapy</li></ul></div><div class="svc-card" data-r data-d="2"><div class="svc-icon">🗣️</div><h3>Speech &amp; Language Therapy</h3><ul class="svc-sublist"><li>Speech and Language Assessment</li><li>Speech and Language Therapy</li><li>Voice Therapy</li><li>Articulation Therapy</li><li>Fluency (Stuttering) Therapy</li><li>Speech Therapy for Stroke Patients</li><li>Therapy for Learning Disability</li></ul></div><div class="svc-card" data-r data-d="3"><div class="svc-icon">🖐️</div><h3>Occupational Therapy</h3><ul class="svc-sublist"><li>Pediatric Occupational Therapy</li><li>Sensory Integration Therapy</li><li>Activities of Daily Living (ADL) Training</li><li>Visual-Motor Integration Training</li><li>Behavioural Therapy</li><li>Play Skill Development</li><li>Fine and Gross Motor Skill Development</li></ul></div><div class="svc-card" data-r data-d="1"><div class="svc-icon">🎓</div><h3>Special Education</h3><ul class="svc-sublist"><li>Individualized Education Plan (IEP) Support</li><li>Learning Disability Assessment</li><li>Cognitive Skill Development</li><li>Remedial Teaching</li><li>Life Skills Training</li><li>Behavioural and Emotional Support</li><li>Parent Counseling and Guidance</li></ul></div><div class="svc-card" data-r data-d="2"><div class="svc-icon">🧠</div><h3>Neurological Rehabilitation</h3><ul class="svc-sublist"><li>Stroke Rehabilitation</li><li>Parkinson's Disease Management</li><li>Spinal Cord Injury Rehabilitation</li><li>Balance and Coordination Training</li><li>Gait Training</li><li>Cognitive Rehabilitation</li><li>Neuro-Developmental Therapy (NDT)</li></ul></div><div class="svc-card" data-r data-d="3"><div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l-1 -3l4 -2l4 1h3.5"/><path d="M3 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M11 6a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12 17v-7"/><path d="M8 20h7l1 -4l4 -2"/><path d="M18 20h3"/></svg></div><h3>Physiotherapy</h3><ul class="svc-sublist"><li>Pediatric Physiotherapy</li><li>Pain Management</li><li>Postural Training</li><li>Range of Motion Exercises</li><li>Home Exercise Programs</li></ul></div>
     </div>
   </div>
 </section>
@@ -269,12 +288,12 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
   <div class="ps-overlay"></div>
   <div class="ps-content">
     <h2>Ready to Get Started?</h2>
-    <p>New No 3, HIG 62, Anna Salai Rd, NH-1, Maraimalai Nagar, Tamil Nadu 603209, India</p>
+    <p>New No 3, HIG 62, Anna Salai, NH-1, Maraimalai Nagar, Tamil Nadu 603209, India</p>
     <a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I%20found%20your%20rehabilitation%20centre%20online%20and%20would%20like%20to%20enquire%20about%20your%20services%20and%20book%20an%20appointment.%20Could%20you%20please%20guide%20me%20on%20the%20next%20steps%3F" style="background:#27AE60;color:#fff;padding:14px 36px;border-radius:10px;text-decoration:none;font-weight:700;display:inline-block">💬 WhatsApp Us</a>
   </div>
 </div>
 
-<section><div class="container"><div class="sec-head" data-r><p class="sec-eyebrow">Our Space</p><h2>A Look Inside</h2></div><div class="gallery-grid"><img src="./img/photo-2.jpg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?w=1600&q=85&fit=crop&auto=format'"><img src="./1.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./3.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./4.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./5.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./6.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./2.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./7.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"></div></div></section>
+<section><div class="container"><div class="sec-head" data-r><p class="sec-eyebrow">Our Space</p><h2>A Look Inside</h2></div><div class="gallery-grid"><img src="./1.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./2.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./7.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./4.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./5.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./6.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./3.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./img/photo-2.jpg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?w=1600&q=85&fit=crop&auto=format'"></div></div></section>
 
 <section id="products" class="products-bg">
   <div class="container">
@@ -305,60 +324,101 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
 
 <section id="enquiry" class="enquiry-bg">
   <div class="container">
-    <div class="enquiry-card" data-r>
-      <div class="enquiry-icon">👂</div>
-      <h2>Book Your Hearing Consultation</h2>
-      <p>Take the first step towards better hearing.<br>Our team will contact you shortly.</p>
-      <div class="enquiry-divider"></div>
-      <form id="enquiry-form">
-        <div class="eq-row">
-          <div class="eq-field">
-            <label>Name <span class="req">*</span></label>
-            <div class="eq-input-wrap"><span class="eq-icon">👤</span><input type="text" id="eq-name" placeholder="Enter your full name" required></div>
+    <div class="enquiry-wrap" data-r>
+      <div class="enquiry-header">
+        <img src="./img/logo.jpeg" alt="TKMRC logo">
+        <div class="enquiry-header-text">
+          <span class="eh1">TKMRC</span>
+          <span class="eh2">TK MULTI REHABILITATION CENTRE</span>
+        </div>
+      </div>
+      <div class="enquiry-body">
+        <div class="enquiry-card">
+          <h2>Enquire About Our Rehabilitation Services</h2>
+          <div class="enquiry-divider"></div>
+          <p>Please share your details and our team will get back to you shortly.</p>
+        </div>
+        <div class="enquiry-body-grid">
+          <div>
+            <form id="enquiry-form">
+              <div class="eq-row">
+                <div class="eq-field">
+                  <label>Full Name <span class="req">*</span></label>
+                  <div class="eq-input-wrap"><span class="eq-icon">👤</span><input type="text" id="eq-name" placeholder="Enter your full name" required></div>
+                </div>
+                <div class="eq-field">
+                  <label>Phone Number <span class="req">*</span></label>
+                  <div class="eq-input-wrap"><span class="eq-icon">📞</span><input type="tel" id="eq-phone" placeholder="Enter your phone number" required></div>
+                </div>
+              </div>
+              <div class="eq-row">
+                <div class="eq-field">
+                  <label>Email Address (optional)</label>
+                  <div class="eq-input-wrap"><span class="eq-icon">✉️</span><input type="email" id="eq-email" placeholder="Enter your email address"></div>
+                </div>
+                <div class="eq-field">
+                  <label>Age</label>
+                  <div class="eq-input-wrap"><span class="eq-icon">📅</span><input type="number" min="0" max="120" id="eq-age" placeholder="Enter your age"></div>
+                </div>
+              </div>
+              <div class="eq-field">
+                <label>Service Required <span class="req">*</span></label>
+                <div class="eq-input-wrap">
+                  <span class="eq-icon">🎧</span>
+                  <select id="eq-service" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option>Physiotherapy</option>
+                    <option>Neurological Rehabilitation</option>
+                    <option>Occupational Therapy</option>
+                    <option>Speech &amp; Language Therapy</option>
+                    <option>Special Education</option>
+                    <option>Audiology</option>
+                    <option>General Enquiry</option>
+                  </select>
+                </div>
+              </div>
+              <div class="eq-row">
+                <div class="eq-field">
+                  <label>Preferred Date</label>
+                  <div class="eq-input-wrap"><span class="eq-icon">📅</span><input type="date" id="eq-date"></div>
+                </div>
+                <div class="eq-field">
+                  <label>Preferred Time</label>
+                  <div class="eq-input-wrap"><span class="eq-icon">🕐</span><input type="time" id="eq-time"></div>
+                </div>
+              </div>
+              <div class="eq-field">
+                <label>Your Requirement / Message</label>
+                <div class="eq-input-wrap"><span class="eq-icon eq-icon-top">📝</span><textarea id="eq-message" placeholder="Tell us about your requirement"></textarea></div>
+              </div>
+              <label class="eq-consent"><input type="checkbox" id="eq-consent" required> I agree to be contacted regarding my enquiry.</label>
+              <button type="submit" class="eq-submit">📨 Submit Enquiry</button>
+              <a href="https://wa.me/919363527775?text=Hello%20TKMRC!%20I%20found%20your%20rehabilitation%20centre%20online%20and%20would%20like%20to%20enquire%20about%20your%20services%20and%20book%20an%20appointment.%20Could%20you%20please%20guide%20me%20on%20the%20next%20steps%3F" class="eq-submit-outline">💬 Chat on WhatsApp Instead</a>
+            </form>
+            <p class="eq-note">🛡️ Your information is safe with us. We respect your privacy.</p>
           </div>
-          <div class="eq-field">
-            <label>Phone Number <span class="req">*</span></label>
-            <div class="eq-input-wrap"><span class="eq-icon">📞</span><input type="tel" id="eq-phone" placeholder="Enter your phone number" required></div>
+          <div class="enquiry-sidebar">
+            <h4>Our Services</h4>
+            <ul class="enquiry-svc-list">
+              <li><span>👂</span>Audiology</li>
+              <li><span>🗣️</span>Speech &amp; Language Therapy</li>
+              <li><span>🖐️</span>Occupational Therapy</li>
+              <li><span>🎓</span>Special Education</li>
+              <li><span>🧠</span>Neurological Rehabilitation</li>
+              <li><span>🦵</span>Physiotherapy</li>
+              <li><span>💬</span>General Enquiry</li>
+            </ul>
+            <h4>Why Choose TKMRC?</h4>
+            <ul class="enquiry-why-list">
+              <li>Personalized Care</li>
+              <li>Expert Rehabilitation Team</li>
+              <li>Modern Techniques</li>
+              <li>Patient-Centred Approach</li>
+              <li>Convenient Location</li>
+            </ul>
           </div>
         </div>
-        <div class="eq-row">
-          <div class="eq-field">
-            <label>Email</label>
-            <div class="eq-input-wrap"><span class="eq-icon">✉️</span><input type="email" id="eq-email" placeholder="Enter your email address"></div>
-          </div>
-          <div class="eq-field">
-            <label>Location</label>
-            <div class="eq-input-wrap"><span class="eq-icon">📍</span><input type="text" id="eq-location" placeholder="Enter your location"></div>
-          </div>
-        </div>
-        <div class="eq-field">
-          <label>Service Required <span class="req">*</span></label>
-          <div class="eq-input-wrap">
-            <span class="eq-icon">🎧</span>
-            <select id="eq-service" required>
-              <option value="" disabled selected>Choose a service</option>
-              <option>Hearing Test</option>
-              <option>Hearing Aid Consultation</option>
-              <option>Hearing Aid Trial</option>
-              <option>Hearing Aid Purchase</option>
-              <option>Hearing Aid Service / Repair</option>
-              <option>Hearing Aid Upgrade</option>
-              <option>General Enquiry</option>
-            </select>
-          </div>
-        </div>
-        <div class="eq-field">
-          <label>Preferred Date</label>
-          <div class="eq-input-wrap"><span class="eq-icon">📅</span><input type="date" id="eq-date"></div>
-        </div>
-        <div class="eq-field">
-          <label>Tell Us Your Concern</label>
-          <div class="eq-input-wrap"><span class="eq-icon eq-icon-top">💬</span><textarea id="eq-concern" placeholder="Please describe your concern or how we can help you..."></textarea></div>
-        </div>
-        <label class="eq-consent"><input type="checkbox" id="eq-consent" required> I agree to be contacted regarding my enquiry.</label>
-        <button type="submit" class="eq-submit">📅 Submit Enquiry</button>
-      </form>
-      <p class="eq-note">🛡️ Your information is safe and will only be used to assist you.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -475,16 +535,18 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
     var name=document.getElementById('eq-name').value.trim();
     var phone=document.getElementById('eq-phone').value.trim();
     var email=document.getElementById('eq-email').value.trim();
-    var location=document.getElementById('eq-location').value.trim();
+    var age=document.getElementById('eq-age').value.trim();
     var service=document.getElementById('eq-service').value;
     var date=document.getElementById('eq-date').value;
-    var concern=document.getElementById('eq-concern').value.trim();
-    var lines=['Hello TKMRC! I would like to book a hearing consultation.','','Name: '+name,'Phone: '+phone];
+    var time=document.getElementById('eq-time').value;
+    var message=document.getElementById('eq-message').value.trim();
+    var lines=['Hello TKMRC! I would like to enquire about your rehabilitation services.','','Name: '+name,'Phone: '+phone];
     if(email)lines.push('Email: '+email);
-    if(location)lines.push('Location: '+location);
+    if(age)lines.push('Age: '+age);
     lines.push('Service Required: '+service);
     if(date)lines.push('Preferred Date: '+date);
-    if(concern)lines.push('Concern: '+concern);
+    if(time)lines.push('Preferred Time: '+time);
+    if(message)lines.push('Requirement: '+message);
     window.open('https://wa.me/919363527775?text='+encodeURIComponent(lines.join('\n')),'_blank');
   });
 })();
