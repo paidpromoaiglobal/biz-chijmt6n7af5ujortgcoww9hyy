@@ -502,7 +502,7 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
   if(!firstP)return;
   function align(){
     if(window.innerWidth<768){ imgWrap.style.marginTop=''; return; }
-    imgWrap.style.marginTop=firstP.offsetTop+'px';
+    imgWrap.style.marginTop=(firstP.offsetTop+90)+'px';
   }
   align();
   window.addEventListener('resize',align);
