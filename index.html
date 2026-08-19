@@ -148,14 +148,6 @@ section{padding:72px 5vw}
 .view-btn{display:inline-block;background:#1A6B8A;color:#fff;padding:9px 22px;border-radius:50px;text-decoration:none;font-size:.83rem;font-weight:600;white-space:nowrap;transition:opacity .2s;border:none;font-family:inherit;cursor:pointer}
 .view-btn:hover{opacity:.88}
 /* PRODUCT ENQUIRY MODAL */
-.pm-overlay{position:fixed;inset:0;z-index:9997;background:rgba(15,23,42,.6);display:none;align-items:center;justify-content:center;padding:5vw}
-.pm-overlay.open{display:flex}
-.pm-modal{position:relative;background:#fff;border-radius:20px;max-width:420px;width:100%;padding:36px 28px 28px;box-shadow:0 24px 64px rgba(0,0,0,.25)}
-.pm-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;border:none;background:#f1f5f9;color:#334155;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
-.pm-close:hover{background:#e2e8f0}
-.pm-title{font-size:1.1rem;font-weight:800;color:#0f172a;margin-bottom:18px;text-align:center;padding-right:8px}
-.pm-list{display:flex;flex-direction:column;gap:10px}
-.pm-item{background:#f8fafc;border-radius:50px;padding:11px 18px;font-size:.87rem;font-weight:600;color:#0f172a;border:1px solid #e2e8f0}
 /* ENQUIRY FORM */
 .enquiry-bg{background:linear-gradient(180deg,#eef6f8 0%,#ffffff 100%)}
 .enquiry-wrap{max-width:1040px;margin:0 auto;background:#fff;border-radius:20px;box-shadow:0 20px 56px rgba(0,0,0,.1);overflow:hidden;border:1px solid #e2e8f0}
@@ -321,20 +313,13 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
     </div>
     <div class="prod-photo-grid" data-r>
       <div class="prod-photo-card"><img src="./n1.png" alt="BTE Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="1">💬 Enquire</button></div></div>
-      <div class="prod-photo-card"><img src="./n2.jpeg" alt="RIC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="2">💬 Enquire</button></div></div>
+      <div class="prod-photo-card"><img src="./n2.png" alt="RIC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="2">💬 Enquire</button></div></div>
       <div class="prod-photo-card"><img src="./n3.png" alt="IIC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="3">💬 Enquire</button></div></div>
-      <div class="prod-photo-card"><img src="./n4.jpeg" alt="CIC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="4">💬 Enquire</button></div></div>
-      <div class="prod-photo-card"><img src="./n5.jpeg" alt="ITC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="5">💬 Enquire</button></div></div>
-      <div class="prod-photo-card"><img src="./n6.jpeg" alt="ITE Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="6">💬 Enquire</button></div></div>
-      <div class="prod-photo-card"><img src="./n7.jpeg" alt="Rechargeable Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="7">💬 Enquire</button></div></div>
-      <div class="prod-photo-card"><img src="./n8.jpeg" alt="Pediatric Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="8">💬 Enquire</button></div></div>
-    </div>
-  </div>
-  <div class="pm-overlay" id="pmOverlay">
-    <div class="pm-modal" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
-      <button type="button" class="pm-close" id="pmClose" aria-label="Close">✕</button>
-      <h3 class="pm-title" id="pmTitle"></h3>
-      <div class="pm-list" id="pmList"></div>
+      <div class="prod-photo-card"><img src="./n4.png" alt="CIC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="4">💬 Enquire</button></div></div>
+      <div class="prod-photo-card"><img src="./n5.png" alt="ITC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="5">💬 Enquire</button></div></div>
+      <div class="prod-photo-card"><img src="./n6.png" alt="ITE Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="6">💬 Enquire</button></div></div>
+      <div class="prod-photo-card"><img src="./n7.png" alt="Rechargeable Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="7">💬 Enquire</button></div></div>
+      <div class="prod-photo-card"><img src="./n8.png" alt="Pediatric Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="8">💬 Enquire</button></div></div>
     </div>
   </div>
 </section>
@@ -530,47 +515,32 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
   window.addEventListener('load',align);
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(align);
 })();
-// Product enquiry modal
+// Product Enquire buttons -> scroll to and prefill the Enquiry Form
 (function(){
-  var overlay=document.getElementById('pmOverlay');
-  if(!overlay)return;
-  var titleEl=document.getElementById('pmTitle');
-  var listEl=document.getElementById('pmList');
-  var closeBtn=document.getElementById('pmClose');
-  var PRODUCT_INFO={
-    1:{name:'BTE (Behind-The-Ear) Hearing Aid',bullets:['🔊 Powerful Sound Output','🔋 Long Battery Life','👂 Comfortable Behind-Ear Design','🗣️ Clearer Speech & Conversations','⚙️ Easy to Use & Adjust','💪 Reliable Everyday Performance']},
-    2:{name:'RIC (Receiver-In-Canal) Hearing Aid',bullets:['🎧 Crystal Clear Sound','📱 Bluetooth Connectivity','👂 Comfortable Receiver-in-Canal Design','🔊 Clear & Natural Hearing','✨ Compact & Discreet','💙 Easy to Use']},
-    3:{name:'IIC (Invisible-In-Canal) Hearing Aid',bullets:['👁️ Virtually Invisible','👂 Custom Fit','🔊 Natural Sound','✨ Discreet Comfort','💯 Everyday Confidence']},
-    4:{name:'CIC (Completely-In-Canal) Hearing Aid',bullets:['👂 Nearly Invisible Design','🎯 Custom-Made Fit','🔊 Clear Natural Sound','😊 Comfortable All Day','✨ Discreet & Stylish']},
-    5:{name:'ITC (In-The-Canal) Hearing Aid',bullets:['👂 Discreet Design','🔊 Easy Volume Control','✨ Comfortable Fit','🎯 Clear Sound Quality','💯 Everyday Convenience']},
-    6:{name:'ITE (In-The-Ear) Hearing Aid',bullets:['👂 Comfortable In-Ear Fit','🔊 Clear Sound Quality','🤝 Easy to Handle','🎯 Simple Controls','✨ Reliable Everyday Use']},
-    7:{name:'Rechargeable Hearing Aid',bullets:['🔋 Rechargeable Battery','⚡ Fast & Easy Charging','🎧 Clear Sound Quality','🌟 All-Day Performance','♻️ Eco-Friendly Design']},
-    8:{name:'Pediatric Hearing Aid',bullets:['🌈 Child-Friendly Design','🔊 Clear Sound Quality','👂 Comfortable Fit','🎒 Perfect for Daily Activities','✨ Built for Growing Kids']}
+  var PRODUCT_NAMES={
+    1:'BTE (Behind-The-Ear) Hearing Aid',
+    2:'RIC (Receiver-In-Canal) Hearing Aid',
+    3:'IIC (Invisible-In-Canal) Hearing Aid',
+    4:'CIC (Completely-In-Canal) Hearing Aid',
+    5:'ITC (In-The-Canal) Hearing Aid',
+    6:'ITE (In-The-Ear) Hearing Aid',
+    7:'Rechargeable Hearing Aid',
+    8:'Pediatric Hearing Aid'
   };
-  function openModal(id){
-    var info=PRODUCT_INFO[id];
-    if(!info)return;
-    titleEl.textContent=info.name;
-    listEl.innerHTML='';
-    info.bullets.forEach(function(b){
-      var item=document.createElement('div');
-      item.className='pm-item';
-      item.textContent=b;
-      listEl.appendChild(item);
-    });
-    overlay.classList.add('open');
-    document.body.style.overflow='hidden';
-  }
-  function closeModal(){
-    overlay.classList.remove('open');
-    document.body.style.overflow='';
-  }
+  var section=document.getElementById('enquiry');
+  var serviceEl=document.getElementById('eq-service');
+  var messageEl=document.getElementById('eq-message');
+  var nameEl=document.getElementById('eq-name');
+  if(!section)return;
   document.querySelectorAll('.view-btn[data-product]').forEach(function(btn){
-    btn.addEventListener('click',function(){ openModal(btn.getAttribute('data-product')); });
+    btn.addEventListener('click',function(){
+      var name=PRODUCT_NAMES[btn.getAttribute('data-product')];
+      if(name&&messageEl)messageEl.value='I\'m interested in the '+name+'. Please share more details.';
+      if(serviceEl)serviceEl.value='Audiology';
+      section.scrollIntoView({behavior:'smooth',block:'start'});
+      if(nameEl)setTimeout(function(){nameEl.focus();},450);
+    });
   });
-  closeBtn.addEventListener('click',closeModal);
-  overlay.addEventListener('click',function(e){ if(e.target===overlay)closeModal(); });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape')closeModal(); });
 })();
 // Enquiry form -> WhatsApp
 (function(){
