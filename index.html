@@ -92,7 +92,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;background:linear-gradient(1
 /* SECTIONS */
 section{padding:72px 5vw}
 .container{max-width:980px;margin:0 auto}
-.container-wide{max-width:1180px;margin:0 auto}
 .sec-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#27AE60;margin-bottom:10px}
 .sec-head h2{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:800;color:#0f172a;margin-bottom:10px;letter-spacing:-.02em}
 .sec-head p{color:#64748b;font-size:.95rem;max-width:520px;margin:0 auto}
@@ -138,14 +137,17 @@ section{padding:72px 5vw}
 .gallery-grid img:hover{transform:scale(1.03);opacity:.9}
 /* PRODUCTS */
 .products-bg{background:linear-gradient(180deg,#ffffff 0%,#eef6f8 100%)}
-.prod-photo-grid{display:grid;grid-template-columns:1fr;gap:26px;max-width:420px;margin:0 auto}
-@media(min-width:640px){.prod-photo-grid{grid-template-columns:repeat(2,1fr);max-width:900px}}
-@media(min-width:1000px){.prod-photo-grid{grid-template-columns:repeat(3,1fr);max-width:none}}
+.prod-photo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(min-width:600px){.prod-photo-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:900px){.prod-photo-grid{grid-template-columns:repeat(4,1fr)}}
 .prod-photo-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;position:relative;transition:transform .22s,box-shadow .22s}
 .prod-photo-card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(0,0,0,.1)}
 .prod-photo-card:before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1A6B8A,#27AE60);z-index:1}
 .prod-photo-card img{width:100%;aspect-ratio:2/3;object-fit:contain;background:#fff;display:block}
-.prod-card-footer{padding:16px;text-align:center}
+.prod-card-caption{padding:14px 14px 4px;text-align:center}
+.prod-card-caption h4{font-size:.92rem;font-weight:800;color:#0f172a;letter-spacing:-.01em;margin-bottom:6px}
+.prod-card-caption p{font-size:.76rem;color:#64748b;line-height:1.5;margin-bottom:3px}
+.prod-card-footer{padding:12px 16px 16px;text-align:center}
 .view-btn{display:inline-block;background:#1A6B8A;color:#fff;padding:9px 22px;border-radius:50px;text-decoration:none;font-size:.83rem;font-weight:600;white-space:nowrap;transition:opacity .2s;border:none;font-family:inherit;cursor:pointer}
 .view-btn:hover{opacity:.88}
 /* PRODUCT ENQUIRY MODAL */
@@ -306,21 +308,21 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
 <section><div class="container"><div class="sec-head" data-r><p class="sec-eyebrow">Our Space</p><h2>A Look Inside</h2></div><div class="gallery-grid"><img src="./1.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./2.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./7.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./11.jpeg" alt="Hearing aid domes – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./hearing-aid-tips.jpeg" alt="Hearing aid tips – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./4.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./5.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./3.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./6.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./9.jpg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"></div></div></section>
 
 <section id="products" class="products-bg">
-  <div class="container-wide">
+  <div class="container">
     <div class="sec-head" data-r>
       <p class="sec-eyebrow">Shop With Us</p>
       <h2>Our Premium Products</h2>
       <p>Explore our curated range of premium hearing aids and rehabilitation products</p>
     </div>
     <div class="prod-photo-grid" data-r>
-      <div class="prod-photo-card"><img src="./r1.png" alt="BTE Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="1">💬 Enquire</button></div></div>
-      <div class="prod-photo-card"><img src="./r2.png" alt="RIC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="2">💬 Enquire</button></div></div>
-      <div class="prod-photo-card"><img src="./n3.png" alt="IIC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="3">💬 Enquire</button></div></div>
-      <div class="prod-photo-card"><img src="./r4.png" alt="CIC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="4">💬 Enquire</button></div></div>
-      <div class="prod-photo-card"><img src="./r5.png" alt="ITC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="5">💬 Enquire</button></div></div>
-      <div class="prod-photo-card"><img src="./r6.png" alt="ITE Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="6">💬 Enquire</button></div></div>
-      <div class="prod-photo-card"><img src="./r7.png" alt="Rechargeable Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="7">💬 Enquire</button></div></div>
-      <div class="prod-photo-card"><img src="./r8.png" alt="Pediatric Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-footer"><button type="button" class="view-btn" data-product="8">💬 Enquire</button></div></div>
+      <div class="prod-photo-card"><img src="./r1.png" alt="BTE Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-caption"><h4>Clear Sound &amp; Long Battery Life</h4><p>Powerful performance for better conversations.</p><p>Stay powered all day without worry.</p></div><div class="prod-card-footer"><button type="button" class="view-btn" data-product="1">💬 Enquire</button></div></div>
+      <div class="prod-photo-card"><img src="./r2.png" alt="RIC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-caption"><h4>Crystal Clear Sound &amp; Bluetooth</h4><p>Experience every word with clarity.</p><p>Seamless connection to your devices.</p></div><div class="prod-card-footer"><button type="button" class="view-btn" data-product="2">💬 Enquire</button></div></div>
+      <div class="prod-photo-card"><img src="./n3.png" alt="IIC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-caption"><h4>100% Invisible &amp; Custom Fit</h4><p>Completely hidden inside your ear.</p><p>Designed for maximum comfort.</p></div><div class="prod-card-footer"><button type="button" class="view-btn" data-product="3">💬 Enquire</button></div></div>
+      <div class="prod-photo-card"><img src="./r4.png" alt="CIC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-caption"><h4>Nearly Invisible &amp; Custom Fit</h4><p>Discreet design for confident all-day wear.</p><p>Designed for maximum comfort and secure fit.</p></div><div class="prod-card-footer"><button type="button" class="view-btn" data-product="4">💬 Enquire</button></div></div>
+      <div class="prod-photo-card"><img src="./r5.png" alt="ITC Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-caption"><h4>Discreet &amp; Easy Volume Control</h4><p>Small, subtle design for all-day confidence.</p><p>Adjust volume effortlessly for your comfort.</p></div><div class="prod-card-footer"><button type="button" class="view-btn" data-product="5">💬 Enquire</button></div></div>
+      <div class="prod-photo-card"><img src="./r6.png" alt="ITE Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-caption"><h4>All-Day Comfort &amp; Secure Fit</h4><p>Ergonomic fit for long-lasting comfort.</p><p>Designed for easy insertion and a secure fit.</p></div><div class="prod-card-footer"><button type="button" class="view-btn" data-product="6">💬 Enquire</button></div></div>
+      <div class="prod-photo-card"><img src="./r7.png" alt="Rechargeable Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-caption"><h4>Long-Lasting Power &amp; Convenience</h4><p>Reliable rechargeable battery for all-day use.</p><p>Quick and simple charging anytime, anywhere.</p></div><div class="prod-card-footer"><button type="button" class="view-btn" data-product="7">💬 Enquire</button></div></div>
+      <div class="prod-photo-card"><img src="./r8.png" alt="Pediatric Hearing Aid – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><div class="prod-card-caption"><h4>Fun, Friendly &amp; Clear Sound</h4><p>Bright colors kids love and feel comfortable with.</p><p>Crisp, clear sound for better hearing and learning.</p></div><div class="prod-card-footer"><button type="button" class="view-btn" data-product="8">💬 Enquire</button></div></div>
     </div>
   </div>
 </section>
