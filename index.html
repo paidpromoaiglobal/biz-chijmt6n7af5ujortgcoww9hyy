@@ -92,6 +92,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;background:linear-gradient(1
 /* SECTIONS */
 section{padding:72px 5vw}
 .container{max-width:980px;margin:0 auto}
+.container-wide{max-width:1180px;margin:0 auto}
 .sec-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#27AE60;margin-bottom:10px}
 .sec-head h2{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:800;color:#0f172a;margin-bottom:10px;letter-spacing:-.02em}
 .sec-head p{color:#64748b;font-size:.95rem;max-width:520px;margin:0 auto}
@@ -137,9 +138,9 @@ section{padding:72px 5vw}
 .gallery-grid img:hover{transform:scale(1.03);opacity:.9}
 /* PRODUCTS */
 .products-bg{background:linear-gradient(180deg,#ffffff 0%,#eef6f8 100%)}
-.prod-photo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-@media(min-width:600px){.prod-photo-grid{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:900px){.prod-photo-grid{grid-template-columns:repeat(4,1fr)}}
+.prod-photo-grid{display:grid;grid-template-columns:1fr;gap:26px;max-width:420px;margin:0 auto}
+@media(min-width:640px){.prod-photo-grid{grid-template-columns:repeat(2,1fr);max-width:900px}}
+@media(min-width:1000px){.prod-photo-grid{grid-template-columns:repeat(3,1fr);max-width:none}}
 .prod-photo-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;position:relative;transition:transform .22s,box-shadow .22s}
 .prod-photo-card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(0,0,0,.1)}
 .prod-photo-card:before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1A6B8A,#27AE60);z-index:1}
@@ -305,7 +306,7 @@ footer{background:#020617;color:#334155;padding:28px 5vw;display:flex;flex-direc
 <section><div class="container"><div class="sec-head" data-r><p class="sec-eyebrow">Our Space</p><h2>A Look Inside</h2></div><div class="gallery-grid"><img src="./1.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./2.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./7.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./11.jpeg" alt="Hearing aid domes – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./hearing-aid-tips.jpeg" alt="Hearing aid tips – TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./4.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./5.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./3.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./6.jpeg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"><img src="./9.jpg" alt="TK Multi Rehabilitation Centre (TKMRC)" loading="lazy"></div></div></section>
 
 <section id="products" class="products-bg">
-  <div class="container">
+  <div class="container-wide">
     <div class="sec-head" data-r>
       <p class="sec-eyebrow">Shop With Us</p>
       <h2>Our Premium Products</h2>
